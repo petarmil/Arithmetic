@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic</title>
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="content">
+            <div id="input">
+                <p>Enter first number:</p>
+                <input type="text" name="int1" id="fn">
+                <p>Enter second number:</p>
+                <input type="text" name="int2" id="sn">
+                <p>Chose operation for execute:</p>
+                <div id="+" class="checked" onclick="add()">+</div>
+                <div id="/" class="checked" onclick="sub()">-</div>
+                <div id="/" class="checked" onclick="div()">/</div>
+                <div id="*" class="checked" onclick="mult()">*</div>
+
+
+            </div>
+            <!--end #input-->
+
+
+            <div id="button" onclick="exe()">Reset</div>
+            <p id="rez"></p>
+
+        </div>
+        <!--end #content-->
+
+    </div>
+    <!--end #wrapper-->
+
+    <script>
+
+        var sum;
+        function add() {
+
+            var int1 = document.getElementById("fn").value;
+            int1 = parseInt(int1);
+            var int2 = document.getElementById("sn").value;
+            int2 = parseInt(int2);
+            sum = int1 + int2;
+            document.getElementById("rez").innerHTML = "The result of addition is:  " + (sum);
+            document.getElementById("rez").style.display = "flex";
+
+
+
+        }
+
+        function sub() {
+
+            var int1 = document.getElementById("fn").value;
+            int1 = parseInt(int1);
+            var int2 = document.getElementById("sn").value;
+            int2 = parseInt(int2);
+            sum = int1 - int2;
+            document.getElementById("rez").innerHTML = "The result of substraction is:  " + (sum);
+            document.getElementById("rez").style.display = "flex";
+
+
+        }
+
+        function div() {
+
+            var int1 = document.getElementById("fn").value;
+            int1 = parseInt(int1);
+            var int2 = document.getElementById("sn").value;
+            int2 = parseInt(int2);
+            sum = int1 / int2;
+            document.getElementById("rez").innerHTML = "The result of division is:  " + (sum);
+            document.getElementById("rez").style.display = "flex";
+
+
+        }
+
+        function mult() {
+
+            var int1 = document.getElementById("fn").value;
+            int1 = parseInt(int1);
+            var int2 = document.getElementById("sn").value;
+            int2 = parseInt(int2);
+            sum = int1 * int2;
+            document.getElementById("rez").innerHTML = "The result of multiplication is:  " + (sum);
+            document.getElementById("rez").style.display = "flex";
+
+
+        }
+
+
+
+        function exe() {
+            window.location.reload();
+        }
+
+    </script>
+
+</body>
+
+</html>
